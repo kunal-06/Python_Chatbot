@@ -1,0 +1,7 @@
+streamlit
+json
+os
+spacy
+sklearn
+pandas
+numpy
