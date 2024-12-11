@@ -1,6 +1,5 @@
 # %%
 import pandas as pd
-import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np 
@@ -36,8 +35,6 @@ X_matrix.shape
 def find_best_answer(user_query):
     query_vector = vectorizer.transform([user_query])
     
-
-    from sklearn.metrics.pairwise import cosine_similarity
     similarities = cosine_similarity(query_vector, X_matrix)
     
     best_match_index = similarities.argmax()
